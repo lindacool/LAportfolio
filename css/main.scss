@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,600;0,700;1,500&display=swap');
+
+
+
+body {
+
+    height: 100vh;
+    margin: 0;
+    font-family: 'poppins', arial;
+
+    
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    
+    a {
+        text-decoration: none;
+        
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    .nav-container{
+        background:bisque;
+
+        a {
+            color: white;
+        } 
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            padding: 2em;
+
+            .logo {
+                color:blueviolet;
+                font-weight: bold;
+
+            } 
+                ul {
+                    display: flex;
+
+                    a {
+                        display: block;
+                        padding: 0 1em;
+                    }
+                } 
+            
+
+        }
+    }
+
+    // Fistpage
+    .hero {
+
+        background: #FBDDCF;
+        color: white;
+        display: grid;
+        text-align: center;
+        padding: 4em;
+
+        .content {
+
+            .meet {
+               
+                font-weight: bold;
+                color: #FF64CB;
+                text-decoration: none;
+                align-items: center;
+                
+                p{
+                    margin: 15px;
+                }
+
+                .bounce-arrow {
+                    color: #FFF;
+                    font-size: 24px;
+
+                    .arrow {
+                        font-size: 30px;
+                        color: #fff;
+                        display: inline-block;
+                        width: 100%;
+                    
+                        width: 100%;
+                        animation: bounce 2s ease infinite;
+
+                    }
+
+                    @keyframes bounce {
+                        0%, 25%, 55%, 75%, 100%{
+                            transform: translateY(0);
+                        } 
+                        45% {
+                            transform: translateY(-20px);
+                        }
+                        65% {
+                            transform: translateY(-12px);
+                        }
+                        85% {
+                            transform: translateY(-5px);
+                        }
+                    } 
+                    
+                }
+            }
+        } 
+    } 
+
+    // Recent project section
+    section {
+        padding: 4em 2em;
+        text-align: center;
+
+        .subtitle{
+            text-transform: uppercase;
+            font-weight: bold;
+            color: #6E00FF;
+            letter-spacing: .2em;
+            font-size: .85em;
+
+        }
+
+        .featured-title {
+            color: black;
+            font-weight: bold;
+            font-size: 1em;
+            margin-top: -.4em;
+            display: block;
+
+        }
+
+        .featured-desc{
+            color: #252525;
+            margin-bottom: 3em;
+            font-size: .7em;
+
+        }
+
+        .featured {
+            position: relative;
+    
+        }
+        .featured::before{
+            content: " ";
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: #E5D5FA;
+            top: 0;
+            left: 0;
+            z-index: -1;
+           
+        }
+
+       
+
+    }
+
+    // My skills section
+
+    .skills {
+        background: #BED9D4;
+
+        .skills-container ul li{
+            background:white;
+            padding: 2em;
+            border-radius: 1em;
+            margin-top: 1em;
+
+            .incon-container{
+                height: 100px;
+                display: grid;
+                place-content: center;
+    
+            }
+
+            .skill-title {
+                font-weight: bold;
+            }
+            .skill-desc {
+                margin-bottom: 2em;
+            }
+
+        }
+
+    }
+
+
+    // Portfolio
+
+    .portfolio {
+        background: #F8EEC5;
+
+
+        .portfolio-container a img {
+
+            border-radius: 1em;
+            margin-bottom: 2em;
+        }
+    }
+
+
+}
+
+
+.social-header {
+
+    display: none;
+}
+
+@media only screen and (min-width: 800px) {
+
+    .featured, .portfolio {
+        text-align: left; 
+    }
+
+    .featured, .portfolio-container {
+        display: grid;
+        grid-template-columns: 40% auto;
+
+    }
+
+    .left, .portfolio-left{
+        display: grid;
+        place-content: center;
+
+    }
+
+    .right {
+        margin-left: 2em;
+        margin-top: 1em;
+    }
+
+    .skills {
+        margin-top: -5em;
+        margin-bottom: -7em;
+        padding-top: 7em;
+
+    }
+
+    .skills-container ul{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-gap: 1em;
+    }
+
+    .portfolio {
+        padding-top: 7em;
+    }
+
+    .portfolio-container img{
+        margin-left: 2em;
+    }
+
+
+
+}
+
+@media only screen and (min-width: 1050px) {
+
+    .hero {
+        height: 90vh;
+    }
+
+    .nav-container{
+        display: grid;
+        grid-template-columns: 85% auto;
+    }
+    header {
+        padding: 2em 2em 2em 4em;
+    }
+    .social-header {
+        padding: 2em 4em 2em 0;
+    }
+    section {
+        padding: 4em;
+    }
+
+    .social-header{
+        display: block;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            width: 7em;
+            float: right;
+
+            img {
+                width: 20px;
+            }
+
+
+        }
+    }
+
+    .hero {
+
+        h1{
+            font-size: 3em;
+            line-height: 1.2em;
+        }
+
+        .meet {
+            margin: 30px;
+        }
+
+        .portfolio img {
+            float: right;
+            max-width: 500px;
+        }
+
+
+
+    }
+
+
+
+}
+
+// @media only screen and (min-width: 1250px) {
+
+//     header {
+//         padding: 2em 2em 2em 5em;
+//     }
+
+//     .social-header{
+//         padding:  10em 1em 4em 10em;
+//     }
+
+//     section {
+//         padding: 10em 10em 4em 10em;
+//     }
+
+//     .hero .content {
+//         padding: 6em 8em 6em 10em;
+//     }
+
+// }
+
+// @media only screen and (min-width: 1550px) {
+
+//     header {
+//         padding: 2em 2em 2em 20em;
+//     }
+
+//     .social-header{
+//         padding:  2em 20em 4em 0em;
+//     }
+
+//     section {
+//         padding: 6em 10em 4em 20em;
+//     }
+
+//     .hero .content {
+//         padding: 9em 20em 6em 20em;
+//     }
+
+// }
+
+
+
